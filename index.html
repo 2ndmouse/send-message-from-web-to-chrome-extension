@@ -1,0 +1,27 @@
+<html>
+<head>
+<script src="plugin/jquery-2.1.0.min.js"></script>
+<script>
+isExpanded = false;
+$(function() {
+    $("#toggler").click(function(){
+        if(!isExpanded){
+            window.parent.postMessage("expand", "*");
+            isExpanded=true;
+        }else{
+            window.parent.postMessage("close", "*");
+            isExpanded=false;
+        }
+    });
+});
+
+</script>
+</head>
+<body style=" position: relative; width: 300px; ">
+<div style="width:300px;height:100%;background-color:red;font:white">
+</div>
+<div id="toggler" style="background-color:yellow;position: absolute;top:200px;right: -51px;padding: 30px;cursor: pointer;">
+Toggler
+</div>
+</body>
+</html>

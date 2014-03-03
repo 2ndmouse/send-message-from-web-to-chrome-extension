@@ -1,0 +1,16 @@
+{
+  "manifest_version": 2,
+
+  "name": "Send Msg testing",
+  "description": "Send Msg testing.",
+  "version": "1.0",
+  "content_scripts": [{
+    "run_at": "document_end",
+    "all_frames": true,
+    "matches": ["*://tobiaslei.com/*"],
+    "js":["myscript.js"]
+  }],
+  "permissions": [
+    "http://127.0.0.1:1234/*"
+  ]
+}
